@@ -1,0 +1,22 @@
+{
+  "name": "pl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bowman290/Pulselive.git"
+  },
+  "author": "Kevin Bowman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bowman290/Pulselive/issues"
+  },
+  "homepage": "https://github.com/bowman290/Pulselive#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}

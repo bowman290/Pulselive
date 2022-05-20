@@ -1,0 +1,192 @@
+@charset "UTF-8";
+body {
+  background-color: #f5f5f5;
+  font-family: arial;
+}
+
+h1 {
+  color: #fff;
+  font-size: 22px;
+  margin: 5px 0;
+  font-weight: normal;
+}
+
+h2 {
+  color: #fff;
+  font-size: 14px;
+  margin: 5px 0;
+  font-weight: normal;
+}
+
+#player-container {
+  background: #fff;
+  width: 300px;
+  height: 600px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 70px 225px 305px;
+      grid-template-rows: 70px 225px 305px;
+      grid-template-areas: "drop-down" "player-profile" "stats";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#player-container #drop-down {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: drop-down;
+  padding: 16px;
+}
+
+#player-container #drop-down select {
+  height: 40px;
+  width: 100%;
+  border-radius: 0 !important;
+  background: #eaeaea;
+  border: none !important;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#player-container #drop-down select option {
+  height: 40px;
+  width: 100%;
+}
+
+#player-container #player-profile {
+  background: url("../assets/bg-pat.png") no-repeat right top;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: player-profile;
+  display: -ms-grid;
+  display: grid;
+}
+
+#player-container #player-profile #player-image {
+  width: 180px;
+  height: 220px;
+  margin-left: 10px;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  background-size: cover;
+}
+
+#player-container #player-profile #player-image.toby-alderweireld {
+  background-image: url("../assets/p4916.png");
+}
+
+#player-container #player-profile #player-image.riyad-mahrez {
+  background-image: url("../assets/p8983.png");
+}
+
+#player-container #player-profile #player-image.wayne-rooney {
+  background-image: url("../assets/p2064.png");
+}
+
+#player-container #player-profile #player-image.per-mertesacker {
+  background-image: url("../assets/p4246.png");
+}
+
+#player-container #player-profile #player-image.yaya-touré {
+  background-image: url("../assets/p4148.png");
+}
+
+#player-container #stat-section {
+  width: 100%;
+  background: #ec0150;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: stats;
+  padding: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  position: relative;
+}
+
+#player-container #stat-section #club-badge {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  height: 80px;
+  width: 80px;
+  top: -40px;
+  right: 20px;
+}
+
+#player-container #stat-section #club-badge.tottenham-hotspur {
+  background: url("../assets/badges_sprite.png") #fff no-repeat top left;
+  background-size: 960px;
+  background-position: -399px bottom;
+}
+
+#player-container #stat-section #club-badge.manchester-city {
+  background: url("../assets/badges_sprite.png") #fff no-repeat top left;
+  background-size: 960px;
+  background-position: -640px -560px;
+}
+
+#player-container #stat-section #club-badge.leicester-city {
+  background: url("../assets/badges_sprite.png") #fff no-repeat top left;
+  background-size: 960px;
+  background-position: 0 0;
+}
+
+#player-container #stat-section #club-badge.arsenal {
+  background: url("../assets/badges_sprite.png") #fff no-repeat top left;
+  background-size: 960px;
+  background-position: -81px -76px;
+}
+
+#player-container #stat-section #club-badge.manchester-united {
+  background: url("../assets/badges_sprite.png") #fff no-repeat top left;
+  background-size: 960px;
+  background-position: -480px -640px;
+}
+
+#player-container #stat-section h2 {
+  margin-top: 0;
+}
+
+#player-container #stat-section #stat-wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-row-align: end;
+      align-self: end;
+}
+
+#player-container #stat-section #stat-wrapper .stat-holder {
+  background: #eaeaea;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 50px;
+      grid-template-columns: 1fr 50px;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 0 10px;
+  height: 40px;
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(56, 0, 60, 0.25);
+  box-shadow: 0px 0px 18px 0px rgba(56, 0, 60, 0.25);
+}
+
+#player-container #stat-section #stat-wrapper .stat-holder .stat-name {
+  -ms-grid-column-align: left;
+      justify-self: left;
+}
+
+#player-container #stat-section #stat-wrapper .stat-holder .stat-value {
+  -ms-grid-column-align: right;
+      justify-self: right;
+  font-weight: bold;
+}

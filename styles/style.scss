@@ -1,0 +1,158 @@
+$pink: #ec0150;
+$white: #fff; 
+$grey: #eaeaea;
+$o-space: 16px;
+$f-para: arial;
+
+body{background-color: #f5f5f5; font-family: $f-para}
+h1{
+    color:$white;
+    font-size: 22px;
+    margin:5px 0;
+    font-weight: normal;
+}
+h2{
+    color:$white;
+    font-size: 14px;
+    margin:5px 0;
+    font-weight: normal;
+}
+#player-container{
+    background: $white;
+    width:300px;
+    height:600px;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 225px 305px;
+    grid-template-areas: "drop-down" "player-profile" "stats";
+    box-sizing: border-box;
+
+    #drop-down{
+        grid-area: drop-down;
+        padding:$o-space;
+
+        select{
+            height:40px;
+            width:100%;
+            border-radius: 0 !important;
+            background:$grey;
+            border:none !important;
+            padding-left:5px;
+            padding-right: 5px;
+
+            option{
+                height:40px;
+                width:100%;
+            }
+        }
+    }
+    #player-profile{
+        background: url('../assets/bg-pat.png') no-repeat right top;
+        grid-area: player-profile;
+        display: grid;
+
+        #player-image{
+            width:180px;
+            height:220px;
+            margin-left:10px;
+            align-self: end;
+            background-size: cover;
+
+
+            &.toby-alderweireld{
+                background-image: url('../assets/p4916.png');
+            }
+            &.riyad-mahrez{
+                background-image: url('../assets/p8983.png');
+            }
+            &.wayne-rooney{
+                background-image: url('../assets/p2064.png');
+            }
+            &.per-mertesacker{
+                background-image: url('../assets/p4246.png');
+            }
+            &.yaya-touré{
+                background-image: url('../assets/p4148.png');
+            }
+        }
+    }
+
+    #stat-section{
+        width:100%;
+        background: $pink;
+        grid-area: stats;
+        padding:$o-space;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr;
+        position: relative;
+
+        #club-badge{
+            position: absolute;
+            border-radius: 50%;
+            background: $white;
+            height:80px;
+            width:80px;
+            top:-40px;
+            right:20px;
+            
+    
+            &.tottenham-hotspur{
+                background: url("../assets/badges_sprite.png") #fff no-repeat top left;
+                background-size:960px;
+                background-position: -399px bottom;
+            }
+            &.manchester-city{
+                background: url("../assets/badges_sprite.png") #fff no-repeat top left;
+                background-size:960px;
+                background-position: -640px -560px;
+            }
+            &.leicester-city{
+                background: url("../assets/badges_sprite.png") #fff no-repeat top left;
+                background-size:960px;
+                background-position: 0 0;
+            }
+            &.arsenal{
+                background: url("../assets/badges_sprite.png") #fff no-repeat top left;
+                background-size:960px;
+                background-position: -81px -76px;
+            }
+            &.manchester-united{
+                background: url("../assets/badges_sprite.png") #fff no-repeat top left;
+                background-size:960px;
+                background-position:  -480px -640px;
+            }
+        }
+
+        h2{
+            margin-top:0;
+        }
+
+        #stat-wrapper{
+            display: grid;
+            grid-gap: 2px;
+            grid-template-columns: 1fr;
+            align-self: end;
+
+            .stat-holder{
+                background:$grey;
+                display: grid;
+                grid-template-columns: 1fr 50px;
+                grid-template-rows: auto;
+                align-content: center;
+                padding:0 10px;
+                height:40px;
+                -webkit-box-shadow: 0px 0px 18px 0px rgba(56,0,60,0.25); 
+                box-shadow: 0px 0px 18px 0px rgba(56,0,60,0.25);
+
+                .stat-name{
+                    justify-self: left;
+                }
+                .stat-value{
+                    justify-self: right;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
